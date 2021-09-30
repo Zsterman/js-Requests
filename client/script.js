@@ -81,11 +81,11 @@ sayHelloButton.addEventListener('click', sayHello)
 
 const ohMy = () => {
     axios.get('http://localhost:3000/animals')
-    .then(res => 
-    console.log(res.data));
+    .then(res => {
+        console.log(res.data)
+    })
 
 }
-
 document.getElementById('animals-button').addEventListener('click', ohMy)
 
 
@@ -102,17 +102,17 @@ document.getElementById('animals-button').addEventListener('click', ohMy)
     We'll be updating this function in the next problem.
 */
 
-const repeatMyParam = () => {
-    axios.get('http://localhost:3000/repeat/whatever')
-    .then(res => {
-        console.log(res.data);
-        const repeat = document.getElementById('repeat-text');
-        repeat.textContent = res.data;
-        repeat.style.display = 'block'
-    })
+// const repeatMyParam = () => {
+//     axios.get('http://localhost:3000/repeat/whatever')
+//     .then(res => {
+//         console.log(res.data);
+//         const repeat = document.getElementById('repeat-text');
+//         repeat.textContent = res.data;
+//         repeat.style.display = 'block'
+//     })
         
-}
- document.getElementById('repeat-button').addEventListener('click', repeatMyParam)
+// }
+//  document.getElementById('repeat-button').addEventListener('click', repeatMyParam)
 
  
 // document.getElementById('repeat-button').addEventListener('click', repeatMyParam);
@@ -142,7 +142,7 @@ const request = () => {
     .then(res => 
         console.log(res.data));
 }
-document.getElementById('query-button').addEventListener('click', request)
+document.getElementById('query-button').addEventListener('click', request);
 
 
 ////////////////
@@ -154,7 +154,22 @@ document.getElementById('query-button').addEventListener('click', request)
     Back in the ohMy function on Problem 5, replace the console log in the promise's callback with a for loop that loops over res.data. 
 
     On each iteration of the loop, create a new p element. Set its textContent equal the string at the current index (i) and then append the new p element onto the document's body. 
-*/
+*/ 
+
+// const ohMy = () => {
+//     axios.get('http://localhost:3000/animals')
+//     .then(res => {
+//         console.log(res.data)
+
+//         for(let i = 0; i < res.data.length; i++){
+//             const newP = document.createElement('p')
+//             newP.textContent = res.data[i]
+//             document.document.querySelector('body').appendChild(newP)
+//         }
+//     })
+
+// }
+// document.getElementById('animals-button').addEventListener('click', ohMy)
 
 // Code in the ohMy function in Problem 5
 
@@ -168,7 +183,7 @@ document.getElementById('query-button').addEventListener('click', request)
 */
 
 // Edit code in Problem 8
-    
+
 
 
 ////////////
